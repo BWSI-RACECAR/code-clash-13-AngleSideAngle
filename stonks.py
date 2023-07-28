@@ -48,7 +48,7 @@ class Solution:
             # min max min max
 
             if len(prices) == 0:
-                return 0
+                return profit
 
             stonks = self.stonks(prices[1:], profit, bought, buys)
             # buy, must sell before buying
