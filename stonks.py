@@ -56,9 +56,9 @@ class Solution:
             buy = 0
 
             if bought:
-                sell = self.stonks(prices[1:], profit, False, buys)
+                sell = self.stonks(prices[1:], profit + prices[0], False, buys)
             elif buys < 2:
-                buy = self.stonks(prices[1:], profit, True, buys + 1)
+                buy = self.stonks(prices[1:], profit - prices[0], True, buys + 1)
 
             neither = buy = self.stonks(prices[1:], profit, bought, buys)
 
